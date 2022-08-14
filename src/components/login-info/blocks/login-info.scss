@@ -1,0 +1,16 @@
+.login-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &__information {
+    font-size: 14px;
+    font-weight: 500;
+
+    & span {
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+}

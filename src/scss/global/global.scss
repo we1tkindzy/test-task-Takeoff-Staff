@@ -1,0 +1,114 @@
+.body {
+  @include zero-margin();
+  background-color: $light-green;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  background-color: $light-green;
+
+  @include zero-margin();
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  img {
+    display: block;
+  }
+
+  &--lock {
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    background-color: $light-pink;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  &__title {
+    @include zero-margin();
+    margin-bottom: 20px;
+    text-align: center;
+    color: $dark-green;
+
+    &--contacts {
+      text-align: left;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input,
+  &__submit {
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border: 1px solid $green;
+    background-color: $light-pink;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $dark-grey;
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+    font-size: 16px;
+    background-color: $light-gray;
+    color: $dark-green;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}

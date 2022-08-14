@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  &__input {
+    width: 70%;
+    margin-right: 10px;
+  }
+
+  &__button {
+    margin-right: auto;
+  }
+
+  &__input,
+  &__add-contact {
+    background-color: $light-pink;
+    border: 1px solid $dark-grey;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba($dark-grey, 0.6);
+    }
+  }
+}

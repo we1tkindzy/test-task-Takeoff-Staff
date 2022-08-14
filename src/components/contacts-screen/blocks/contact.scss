@@ -1,0 +1,33 @@
+.contact {
+  display: flex;
+  padding: 10px;
+  border: 1px solid $dark-grey;
+  margin-bottom: 10px;
+
+  &__icon {
+    &--user {
+      margin-right: 10px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  &__phone {
+    color: $dark-grey;
+
+    &:hover,
+    &:focus {
+      color: rgba($dark-grey, 0.6);
+    }
+  }
+}
